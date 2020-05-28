@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+	<script src="todolist.js"></script>
+	<link href="styles.css" type="text/css" rel="stylesheet">
+	<link href="favicon.png" type="image" rel="icon">
+</head>
+
+<body>
+	<div class="title">
+		<h1>To Do List</h1>
+	</div>
+	<div class="userTools">
+		<form id="addItem" action="#" onsubmit="addItem()">
+			<input type="text" id="newItem" placeholder="Add new item" required>
+			<input type="submit" class="submitButton" value="Add">
+		</form>
+		<br>
+		<button class="deleteButton" onclick="deleteAll()">Delete all items</button>
+	</div>
+	<div class="list">
+		<p id="noItemText">No items</p>
+	</div>
+	<div class="credits">
+		<p class="creditsText">Thank you for using this To Do List. 
+		<br> This has been designed by Kylie, 
+		<br> the font used is Kylie's handwriting.</p>
+	</div>
+</body>
+</html>
+
+<!--
+things to do
+- show there are no items -
+- clear all items -
+- credit section -
+
+-->

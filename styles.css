@@ -1,0 +1,78 @@
+/* linking kyliefornia font */
+@font-face {
+	font-family: "kyliefornia";
+	src: url(kyliefornia-regular.ttf) format('truetype');
+}
+
+body {
+	font-family: "kyliefornia";
+	text-align: center;
+}
+
+div.title {
+	width: 100vw;
+	height: 20vw;
+	background-color: #87cefa;
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+	font-size: 40px;
+}
+	
+div.userTools, div.list {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+div.userTools {
+	background-color: #b3e2ff;
+}
+
+div.list {
+	background-color: #cfeeff;
+}
+
+p {
+	font-size: 30px;
+}
+
+p.listItem:hover {
+	text-decoration: line-through;
+}
+
+input {
+	text-align: center;
+	font-family: kyliefornia;
+	font-size: 30px;	
+}
+
+.submitButton, .deleteButton {
+	height: 50px;
+}
+
+.submitButton {
+	width: 20vw;
+}
+
+.deleteButton {
+	font-family: kyliefornia;
+	font-size: 30px;
+	width: 60vw;
+}
+
+#newItem {
+	width: 40vw;
+	height: 43px;
+}
+
+div.credits {
+	background-color: #edf9ff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+p.creditsText {
+	font-size: 20px;
+	color: grey;
+}
