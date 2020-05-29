@@ -2,9 +2,13 @@
 <html>
 <head>
 	<title>To Do List</title>
-	<script src="todolist.js"></script>
-	<link href="styles.css" type="text/css" rel="stylesheet">
-	<link href="favicon.png" type="image" rel="icon">
+	<script src="./todolist.js"></script>
+	<link href="./styles.css" type="text/css" rel="stylesheet">
+	<link href="./favicon.png" type="image" rel="icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="./favicon_io/site.webmanifest">
 </head>
 
 <body>
@@ -12,15 +16,29 @@
 		<h1>To Do List</h1>
 	</div>
 	<div class="userTools">
-		<form id="addItem" action="#" onsubmit="addItem()">
+		<button class="helpButton" onclick="toggleDisplay()">Click to show/hide User Guide</button>
+		<br>
+		<span id="helpText" style="display: none;">
+		<p style="color: grey;">This To Do List works best on desktop.</p>
+		<p>Add an item by typing it into the 'Add new item' field and clicking the 'Add' button.
+		<br>Click on a list item to mark it as completed with a strikethrough.
+		<br>Click on a completed item to delete it from the list.
+		<br>You may use 'Complete all items' to mark all list items as completed 
+		or use 'Delete all items' to restart your To Do List.</p>
+		</span>
+		<br>
+		<form id="addItem">
 			<input type="text" id="newItem" placeholder="Add new item" required>
-			<input type="submit" class="submitButton" value="Add">
+			<button class="submitButton" onclick="addItem()">Add</button>
 		</form>
 		<br>
+		<button class="completeButton" onclick="completeAll()">Complete all items</button>
 		<button class="deleteButton" onclick="deleteAll()">Delete all items</button>
 	</div>
-	<div class="list">
+	<div class="list" id="uncompletedList">
 		<p id="noItemText">No items</p>
+	</div>
+	<div class="list" id="completedList">
 	</div>
 	<div class="credits">
 		<p class="creditsText">Thank you for using this To Do List. 
@@ -29,11 +47,3 @@
 	</div>
 </body>
 </html>
-
-<!--
-things to do
-- show there are no items -
-- clear all items -
-- credit section -
-
--->
