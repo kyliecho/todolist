@@ -1,7 +1,11 @@
-/* linking kyliefornia font */
 @font-face {
-	font-family: "kyliefornia";
-	src: url(kyliefornia-regular.ttf) format('truetype');
+    font-family: 'kyliefornia';
+    src: url('./fonts/kyliefornia-regular-webfont.woff2') format('woff2'),
+         url('./fonts/kyliefornia-regular-webfont.woff') format('woff'),
+		 url('./fonts/kyliefornia-regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 body {
@@ -19,13 +23,13 @@ div.title {
 	font-size: 40px;
 }
 	
-div.userTools, div.list {
+div.userTools, div.help, div.list {
 	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
-div.userTools {
+div.userTools, div.help {
 	background-color: #b3e2ff;
 }
 
@@ -37,8 +41,12 @@ p {
 	font-size: 30px;
 }
 
-p.listItem:hover {
+p.listItem:hover, p.completedListItem {
 	text-decoration: line-through;
+}
+
+p.completedListItem:hover {
+	color: red;
 }
 
 input {
@@ -47,23 +55,27 @@ input {
 	font-size: 30px;	
 }
 
-.submitButton, .deleteButton {
+#newItem {
+	width: 49vw;
+	height: 43px;
+}
+
+button {
 	height: 50px;
+	font-family: kyliefornia;
+	font-size: 30px;
+}
+
+.helpButton {
+	width: 80vw;
 }
 
 .submitButton {
-	width: 20vw;
+	width: 30vw;
 }
 
-.deleteButton {
-	font-family: kyliefornia;
-	font-size: 30px;
-	width: 60vw;
-}
-
-#newItem {
+.completeButton, .deleteButton {
 	width: 40vw;
-	height: 43px;
 }
 
 div.credits {
